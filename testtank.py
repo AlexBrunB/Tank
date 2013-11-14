@@ -8,7 +8,10 @@ if __name__ == '__main__':
     tankalex.move_forward()
     tankzouzou.turnright()
     tankalex.turnleft()
+    tankalex.turnright()
+
     tankalex.fight()
+
     
     
 

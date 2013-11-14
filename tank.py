@@ -1,4 +1,7 @@
 # -*- coding: utf-8 -*-
+
+#We create a dictionnary for directions.
+#The tank is able to tunr on him even before move
 enum_direction = {
     'droite': 0,
     'haut' : 1,
@@ -8,7 +11,8 @@ enum_direction = {
 
 
 #This a class to declare the first class Tank with specifies.
-#The Tank can fight with ammo, a warzone to move, and directions.    
+#The Tank fight with ammo wich decrease and directions which are shown 
+#in a grid.   
 class Tank(object):
     def __init__(self, xinitial, yinitial):
         self.ammo = 50
@@ -39,6 +43,10 @@ class Tank(object):
 
     def turnleft(self):
         print ('votre tank pivote à gauche')
+        self.direction == enum_direction['gauche']
+        self.x = self.x -1
+
+        print ('Votre tank est sur la position %d, %d' % (self.x, self.y))
 
     def fight(self):
         print ('votre tank fait feu')
