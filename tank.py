@@ -31,6 +31,10 @@ class Tank(object):
 
     def turnright(self):
         print ('votre tank tourne à droite')
+        self.direction == enum_direction['droite']
+        self.x = self.x +1
+
+        print ('Votre tank est sur la position %d, %d' % (self.x, self.y))
         
 
     def turnleft(self):
