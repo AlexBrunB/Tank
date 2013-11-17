@@ -24,6 +24,8 @@ can fight between each other with Tanks or others stuff...
           'tanks = tank.main:main',
         ],
     ),
-    tests_require = ['nose'],
-    test_suite = 'nose.collector',
+    # to run the tests just run the command like this:
+    # nosetests -v --with-coverage --cover-html --cover-package=pki
+    # after installing nose and coverage
+    tests_require = ['nose', 'coverage'],
 )

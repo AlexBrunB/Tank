@@ -11,6 +11,8 @@ lib/*
 *.log
 .settings/*
 .project
+.coverage
 .pydevproject
 *.db
 nose-*
+cover/*
