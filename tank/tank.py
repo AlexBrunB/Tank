@@ -38,17 +38,17 @@ class Tank(object):
 
     def turnright(self):
         print('Your tank turns 90° to the right')
-        if self.direction == 0:
-            self.direction = 3
-        else:
-            self.direction -= 1
-        
-    def turnleft(self):
-        print('Your tank turns 90° left')
         if self.direction == 3:
             self.direction = 0
         else:
             self.direction += 1
+        
+    def turnleft(self):
+        print('Your tank turns 90° left')
+        if self.direction == 0:
+            self.direction = 3
+        else:
+            self.direction -= 1
 
     def fire(self):
         if not self.ammo <= 0:
