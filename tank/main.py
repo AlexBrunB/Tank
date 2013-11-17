@@ -9,4 +9,4 @@ def main():
     tankalex.turnleft()
     tankalex.turnright()
 
-    tankalex.fight()
+    tankalex.fire()

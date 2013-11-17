@@ -1,57 +1,63 @@
 # -*- coding: utf-8 -*-
 
-# We create a dictionnary for directions.
-# The tank is able to turn on himself even before moving
-enum_direction = {
-    'droite': 0,
-    'haut' : 1,
-    'gauche': 2,
-    'bas': 3,
+# possible directions
+enum_directions = {
+    'north': 0,
+    'east' : 1,
+    'south': 2,
+    'west': 3,
 }
 
 
 # This is a class to declare the first class Tank with specifies.
-# The Tank fight with ammo wich decrease and directions which are shown 
-# in a grid.   
+# The Tank fight with ammo which decrease each time the player fires
+# and directions which are shown in a grid.   
 class Tank(object):
-    def __init__(self, xinitial, yinitial):
+    def __init__(self, x, y):
         self.ammo = 50
-        self.x = xinitial
-        self.y = yinitial
-        self.direction = enum_direction['droite']
+        self.x = x
+        self.y = y
+        self.direction = enum_directions['north']
 
     def move_forward(self):
-        print ('votre tank avance')
-        if self.direction == enum_direction['droite']:
-            self.x = self.x +1
-        elif self.direction == enum_direction['haut']:
-            self.y = self.y +1 
-        elif self.direction == enum_direction['gauche']:
-            self.x = self.x -1
-        elif self.direction == enum_direction['bas']:
-            self.y = self.y -1    
+        print('Your tank moves forward')
 
-        print ('Votre tank est sur la position %d, %d' % (self.x, self.y))
+        if self.direction == enum_directions['north']:
+            self.y += 1 
+
+        elif self.direction == enum_directions['east']:
+            self.x += 1 
+
+        elif self.direction == enum_directions['south']:
+            self.y -= 1
+
+        elif self.direction == enum_directions['west']:
+            self.x -= 1    
+
+        print('Your tank is now at (%d, %d)' % (self.x, self.y))
 
     def turnright(self):
-        print ('votre tank tourne à droite')
-        self.direction == enum_direction['droite']
-        self.x = self.x +1
-
-        print ('Votre tank est sur la position %d, %d' % (self.x, self.y))
+        print('Your tank turns 90° to the right')
+        if self.direction == 0:
+            self.direction = 3
+        else:
+            self.direction -= 1
         
-
     def turnleft(self):
-        print ('votre tank pivote à gauche')
-        self.direction == enum_direction['gauche']
-        self.x = self.x -1
+        print('Your tank turns 90° left')
+        if self.direction == 3:
+            self.direction = 0
+        else:
+            self.direction += 1
 
-        print ('Votre tank est sur la position %d, %d' % (self.x, self.y))
-
-    def fight(self):
-        print ('votre tank fait feu')
-        self.ammo = self.ammo -1 
-        print ('il vous reste %d munitions' % self.ammo)
+    def fire(self):
+        if not self.ammo <= 0:
+            print('Your tank fires')
+            self.ammo -= 1
+            print('Your tank has %s ammo left' % self.ammo)
+        else:
+            print('You cannot fire when ammo is empty')
 
     def reload(self):
-        print ('plus de munitions, vous devez recharger')
+        print('Your tank reloads')
+        self.ammo = 50
