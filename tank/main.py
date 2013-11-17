@@ -1,7 +1,6 @@
 from tank import Tank
 
-
-if __name__ == '__main__':
+def main():
     tankalex = Tank(5, 5)
     tankzouzou = Tank(10, 10)
 
@@ -11,13 +10,3 @@ if __name__ == '__main__':
     tankalex.turnright()
 
     tankalex.fight()
-
-    
-    
-
-    
-    
-    
-    
-    
-    

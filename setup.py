@@ -3,10 +3,11 @@ from setuptools import setup, find_packages
 version = '0.0'
 
 setup(
-    name='tank ',
+    name='tank',
     version=0.1,
-    description="This is a module to create a batllefield where object Tank can fight. ",
-    long_description="This module is create to generated a battlefield where Players can fight between each other with Tank or others stuff...""\
+    description="battlefield where Tanks can fight.",
+    long_description="""This module generates a battlefield where Players
+can fight between each other with Tanks or others stuff...
 """,
     classifiers=[],
     keywords='Tank',
@@ -18,6 +19,11 @@ setup(
     include_package_data=True,
     zip_safe=True,
     install_requires=[],
-    entry_points="""
-    # -*- Entry points: -*-
-    """,
+    entry_points=dict(
+        console_scripts=[
+          'tanks = tank.main:main',
+        ],
+    ),
+    tests_require = ['nose'],
+    test_suite = 'nose.collector',
+)
