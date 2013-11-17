@@ -23,7 +23,7 @@ Testing your new implemention
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 When implementing something new (or just after hacking in the source code) you
-shoudld always implement your proper tests
+should always implement proper tests
 
 The second thing you should always do is run the test suite to make sure
 nothing is broken::
