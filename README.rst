@@ -6,15 +6,15 @@ An educationnal python program
 Install
 ~~~~~~~
 
-Activate your preferred virtualenv and clone Tank:
+Activate your preferred virtualenv and clone Tank::
 
   $ hg clone http://bitbucket.org/alexbrun/tank
 
-Then install it in development mode:
+Then install it in development mode::
 
   $ python setup.py develop
 
-If you want to develop on it you should also install the dev tools:
+If you want to develop on it you should also install the dev tools::
 
   $ pip install nose
   $ pip install coverage
@@ -26,7 +26,7 @@ When implementing something new (or just after hacking in the source code) you
 shoudld always implement your proper tests
 
 The second thing you should always do is run the test suite to make sure
-nothing is broken:
+nothing is broken::
 
   $ nosetests -v --with-coverage --cover-html --cover-package=tank
 
