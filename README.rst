@@ -8,7 +8,7 @@ Install
 
 Activate your preferred virtualenv and clone Tank:
 
-  $ hg clone http://bitbucket.org/alexbrun/Tank
+  $ hg clone http://bitbucket.org/alexbrun/tank
 
 Then install it in development mode:
 
