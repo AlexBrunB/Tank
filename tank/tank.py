@@ -61,3 +61,6 @@ class Tank(object):
     def reload(self):
         print('Your tank reloads')
         self.ammo = 50
+
+ 
+
