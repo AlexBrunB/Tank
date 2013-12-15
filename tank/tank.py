@@ -62,5 +62,7 @@ class Tank(object):
         print('Your tank reloads')
         self.ammo = 50
 
- 
+    def hide(self):
+        print ('Your Tank is now hidden at (%d, %d)' %(self.x, self.y))
+        
 

@@ -7,11 +7,13 @@ def main():
     tankalex.move_forward()
     tankalex.turnleft()
     tankalex.fire()
+    tankalex.hide()
     tankalex.move_forward()
     tankalex.move_forward()
     tankalex.fire()
     tankalex.fire()
     tankalex.reload()
+    tankalex.hide()
 
     tankalex.turnleft()
     tankalex.turnleft()
