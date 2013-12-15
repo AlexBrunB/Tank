@@ -19,6 +19,8 @@ class Tank(object):
         self.y = y
         self.direction = enum_directions['north']
 
+
+# This functions are for movements. A Tank can move in 4 diffrents directions.
     def move_forward(self):
         print('Your tank moves forward')
 
@@ -50,6 +52,7 @@ class Tank(object):
         else:
             self.direction -= 1
 
+    #This function manages the arming
     def fire(self):
         if not self.ammo <= 0:
             print('Your tank fires')
@@ -58,10 +61,13 @@ class Tank(object):
         else:
             print('You cannot fire when ammo is empty')
 
+    #This function handles reloading ammos
     def reload(self):
         print('Your tank reloads')
         self.ammo = 50
-
+ 
+    #This function handles the hiding on the battlefield
+    #How can I declare reserved hiding areas?
     def hide(self):
         print ('Your Tank is now hidden at (%d, %d)' %(self.x, self.y))
         
