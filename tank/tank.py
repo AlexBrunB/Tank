@@ -18,6 +18,14 @@ class Element(object):
         self.x = x
         self.y = y
 
+    def add_elements(self):
+        print ('You\'re front of a wall')
+    
+    def error_elements(self):
+        if Tank.move_forward:
+            print ('Huhu are you silly?')
+    #How can I have a condition when the Tank.move_forward?
+
 
 class Vehicule(Element):
     """This is a class to manage directions
@@ -45,6 +53,7 @@ class Vehicule(Element):
 
         print('Your tank is now at (%d, %d)' % (self.x, self.y))
 
+
     def turnright(self):
         print('Your tank turns 90° to the right')
         if self.direction == 3:
@@ -66,7 +75,7 @@ class Tank(Vehicule):
 
     def __init__(self, x, y):
         super(Tank, self).__init__(x, y)
-        self.ammo = 50
+        self.ammo = 5
         print ("Creation d'une instance de Tank")
 
     def fire(self):
@@ -81,11 +90,11 @@ class Tank(Vehicule):
         """This function handles reloading ammos
         """
         print('Your tank reloads')
-        self.ammo = 50
+        self.ammo = 5
 
 
-#class Battlefield(object):
-# def __init__(self):
-#      self.elements = []
-#
-# def add_elements(self, elements):
+
+
+ 
+
+

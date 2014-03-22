@@ -1,21 +1,25 @@
 from tank import Tank
+from tank import Element
 
 
 def main():
-    tankalex = Tank(1, 1)
-    #battlefield = Battlefield()
-    #battefield.add_elements(tankalex)
+    tankflo = Tank (10, 10)
+    mur = Element (0,0)
+    murun= Element(4,4)
+    murdeux=Element(5,5)
 
-    tankalex.move_forward()
-    tankalex.move_forward()
-    tankalex.turnleft()
-    tankalex.fire()
-    tankalex.move_forward()
-    tankalex.move_forward()
-    tankalex.fire()
-    tankalex.fire()
-    tankalex.reload()
-    tankalex.turnleft()
-    tankalex.turnleft()
-    tankalex.move_forward()
-    tankalex.move_forward()
+    mur.add_elements()
+    murun.add_elements()
+    mur.error_elements()
+    
+
+    tankflo.turnright()
+    mur.add_elements()
+    tankflo.turnleft()
+    tankflo.fire()
+    tankflo.fire()
+    tankflo.fire()
+    tankflo.fire()
+    tankflo.fire()
+    tankflo.fire()
+    tankflo.fire()

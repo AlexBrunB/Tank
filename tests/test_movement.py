@@ -60,3 +60,4 @@ def test_turnleft_and_move_all():
     mytank.turnleft()
 
     assert (mytank.x == 0 and mytank.y == 0), 'Tank should be at spawn'
+
